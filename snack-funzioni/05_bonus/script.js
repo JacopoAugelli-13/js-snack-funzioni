@@ -1,8 +1,5 @@
 
-
 const name = 'Mario';
-
-
 
 function ansMe(userName) {
     if (userName) {
@@ -18,7 +15,6 @@ function ansMe(userName) {
     }
 
 }
-
 
 let risultato = ansMe(name)
 console.log(risultato);

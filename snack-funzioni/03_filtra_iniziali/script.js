@@ -2,23 +2,32 @@
 const names = ["Anna", "Luca", "Marco", "Adele", "Laura", "Alessandra"];
 
 
-// Dichiara la funzione qui.
-function getInitial(names, initial) {
-    if (names !== null && names.length > 0) {
+//Dichiara la funzione qui.
+// function getInitial(names, initial) {
+// if (names !== null && names.length > 0) {
 
 
-        let names1 = [];
+// let names1 = [];
 
-        for (i = 0; i < names.length; i++) {
-            if (names.at(i).at(0) === initial)
-                names1.push(names.at(i))
-        }
-        return names1;
-    }
-}
+// for (i = 0; i < names.length; i++) {
+//  if (names.at(i).at(0) === initial)
+//        names1.push(names.at(i))
+//  }
+//    return names1;
+//  }
+// }
 
-let risultato = getInitial(names, 'A');
-console.log(risultato)
+// let risultato = getInitial(names, 'A');
+// console.log(risultato);
 
+// questa è la funzione aggiornata con metodi diversi
 
+const getInitial = (names1, initial) => {
+    if (!names1 || names1.length === 0) return [];
 
+    return names1.filter(name => name.startsWith(initial));
+
+};
+let result = getInitial(names, 'A');
+
+    console.log(result);
